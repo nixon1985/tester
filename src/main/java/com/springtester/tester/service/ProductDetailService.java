@@ -13,8 +13,12 @@ public class ProductDetailService {
     @Autowired
     private ProductDetailRepository productDetailRepository;
 
-    public ProductDetail getProductDetail(ProductDetail productDetail){
+    public ProductDetail saveProductDetail(ProductDetail productDetail){
         return productDetailRepository.save(productDetail);
+    }
+
+    public List<ProductDetail> saveProductDetails(List<ProductDetail> productDetail){
+        return productDetailRepository.saveAll(productDetail);
     }
 
     public List<ProductDetail> getAllProductDetail(){

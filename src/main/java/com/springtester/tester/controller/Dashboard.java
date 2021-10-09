@@ -25,12 +25,12 @@ public class Dashboard {
         return "hello world";
     }
 
-    @PostMapping("/save")
+    @PostMapping("/saveProduct")
     public ProductInfo saveProduct(@RequestBody ProductInfo productInfo){
        return productService.saveProduct(productInfo);
     }
 
-    @PostMapping("/saves")
+    @PostMapping("/saveProducts")
     public List<ProductInfo> saveProducts(@RequestBody List<ProductInfo> productInfo){
         return productService.saveProducts(productInfo);
     }
