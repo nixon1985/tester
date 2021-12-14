@@ -53,5 +53,10 @@ public class Dashboard {
     public ProductInfo productInfo(@RequestBody Product product){
         return productRepository.save(product.getProductInfo());
     }
-
+/*
+    @GetMapping("/findAllProduct")
+    public List<ProductInfo> findAllProduct(){
+        return productRepository.findAll();
+    }
+*/
 }
