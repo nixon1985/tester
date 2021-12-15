@@ -53,6 +53,12 @@ public class Dashboard {
     public ProductInfo productInfo(@RequestBody Product product){
         return productRepository.save(product.getProductInfo());
     }
+
+
+    @PostMapping("/addAllProduct")
+    public List<ProductInfo> productInfos(@RequestBody Product product){
+        return productRepository.saveAll(product.getProductInfos());
+    }
 /*
     @GetMapping("/findAllProduct")
     public List<ProductInfo> findAllProduct(){

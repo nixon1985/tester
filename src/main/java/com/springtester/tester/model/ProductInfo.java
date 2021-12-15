@@ -28,6 +28,6 @@ public class ProductInfo {
 
     @OneToMany(targetEntity = ProductDetail.class,cascade = CascadeType.ALL)
     @JoinColumn(name = "productId",referencedColumnName = "id")
-    private List<ProductDetail> productDetail;
+    private List<ProductDetail> productDetail1;
 
 }
