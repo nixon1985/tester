@@ -7,12 +7,8 @@ import com.springtester.tester.repository.ProductDetailRepository;
 import com.springtester.tester.repository.ProductRepository;
 import com.springtester.tester.service.ProductDetailService;
 import com.springtester.tester.service.ProductService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -33,6 +29,9 @@ public class Dashboard {
         return "hello world";
     }
 
+
+    /* ------------- Multi type Insertion process (Part) -----------*/
+
     @PostMapping("/saveProduct")
     public ProductInfo saveProduct(@RequestBody ProductInfo productInfo){
        return productService.saveProduct(productInfo);
@@ -43,26 +42,47 @@ public class Dashboard {
         return productService.saveProducts(productInfo);
     }
 
-    @GetMapping("/getAllProduct")
-    public List<ProductInfo> getAllProduct(){
-        return productService.getAllProduct();
-    }
-
-
+    /* ----------- */
     @PostMapping("/addProduct")
     public ProductInfo productInfo(@RequestBody Product product){
         return productRepository.save(product.getProductInfo());
     }
 
-
     @PostMapping("/addAllProduct")
     public List<ProductInfo> productInfos(@RequestBody Product product){
         return productRepository.saveAll(product.getProductInfos());
     }
-/*
+
+    /* ------ End Insertion Part ------ */
+
+
+    /* ---------- Get data from database ----------*/
+    @GetMapping("/getAllProduct")
+    public List<ProductInfo> getAllProduct(){
+        return productService.getAllProduct();
+    }
+
     @GetMapping("/findAllProduct")
     public List<ProductInfo> findAllProduct(){
         return productRepository.findAll();
     }
+
+    @RequestMapping(value = "/findByID/{id}")
+    public List<ProductInfo> findByID(@PathVariable int id) {
+        return productRepository.findAllById(id);
+    }
+
+    @GetMapping("/getAllByID/{id}")
+    public List<ProductInfo> getAllByID(@PathVariable int id) {
+        return productRepository.findAllById(id);
+    }
+
+/*
+    @GetMapping("/getByID/{id}")
+    public ProductInfo getByID(@PathVariable int id) {
+        return productRepository.getById(id);
+    }
 */
+
+
 }
