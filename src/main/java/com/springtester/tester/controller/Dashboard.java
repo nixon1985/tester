@@ -9,8 +9,12 @@ import com.springtester.tester.service.ProductDetailService;
 import com.springtester.tester.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 @RestController
 public class Dashboard {
@@ -24,11 +28,27 @@ public class Dashboard {
     private ProductService productService;
     private ProductDetailService productDetailService;
 
+
     @GetMapping("/")
+    ModelAndView getHome(){
+        //Calculating today
+        SimpleDateFormat dateTimeInGMT = new SimpleDateFormat("dd-MMM-yyyy, E \nhh:mm:ss aa ");
+        dateTimeInGMT.setTimeZone(TimeZone.getTimeZone("GMT"));
+        String today = dateTimeInGMT.format(new Date());
+
+        //Creating model
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("today", today);
+        mv.setViewName("index.html");
+
+        return mv;
+    }
+
+
+    @GetMapping("/hello")
     public String testpage(){
         return "hello world";
     }
-
 
     /* ------------- Multi type Insertion process (Part) -----------*/
 
