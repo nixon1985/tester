@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<!--<head th:replace="static/header.html::header" >This is repalcable header</head>-->
+<head th:replace="static/header.html::header" >This is repalcable header</head>
 <body>
-<h1>Body of the page</h1>
-<div th:replace="static/footer.html::footer">This footer contains bootstrap JS and footer note and this div will be replaced</div>
+
+<div>
+    <div>Left menu 2</div>
+    <div th:replace="dashboard.html">Body</div>
+    <div th:replace="static/footer.html::footer">This footer contains bootstrap JS and footer note and this div will be replaced</div>
+</div>
+
 </body>
 </html>

@@ -1,0 +1,254 @@
+<style>
+    .freeze-table{
+        border-spacing:0;
+        font-family: "Segoe UI", sans-serif, "Helvetica Neue";
+        font-size: 14px;
+        padding:0;
+        border: 1px solid #ccc;
+    }
+
+    thead th {
+        top: 0;
+        position: sticky;
+        background-color: #666;
+        color: #fff;
+        z-index: 20;
+        min-height: 30px;
+        height: 30px;
+        text-align: left;
+    }
+    tr:nth-child(even){
+        background-color: #f2f2f2;
+    }
+
+    th, td {
+        padding:0;
+        outline: 1px solid #ccc;
+        border: none;
+        outline-offset: -1px;
+        padding-left: 5px;
+    }
+    tr {
+        min-height: 25px;
+        height: 25px;
+    }
+    .col-id-no {
+        left: 0;
+        position: sticky;
+    }
+    .col-first-name {
+        left:80px;
+        position: sticky;
+    }
+    .fixed-header {
+        z-index: 50;
+    }
+    tr:nth-child(even) td[scope=row] {
+        background-color: #f2f2f2;
+    }
+    tr:nth-child(odd) td[scope=row] {
+        background-color: #ffffff;
+    }
+
+
+</style>
+
+<input type="button" onclick="loaddata()" value="Show">
+<div style="width: 500px; height: 300px; overflow: auto; margin-left: 50px; border: 1px solid">
+
+    <table class="freeze-table" width="700px">
+        <thead>
+        <tr>
+            <th style="min-width: 75px; width: 75px;" class="col-id-no fixed-header">Id Number</th>
+            <th style="min-width: 100px; width: 100px;" class="col-first-name fixed-header">first name</th>
+            <th style="min-width: 100px; width: 100px;" >Last Name</th>
+            <th style="min-width: 300px; width: 300px;" >Address</th>
+            <th style="min-width: 100px; width: 100px;" >Phone</th>
+            <th style="min-width: 100px; width: 100px;" >Email</th>
+            <th style="min-width: 75px; width: 75px;" >DOB</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+        <tr>
+            <td class="col-id-no" scope="row">1000929</td>
+            <td class="col-first-name" scope="row">Shah Alam</td>
+            <td> Khan </td>
+            <td>Dhaka, Bangladesh </td>
+            <td>01722046670</td>
+            <td>nixonpd@gmail.com</td>
+            <td>12-05-1985</td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<script type="text/javascript">
+    function loaddata(){
+        alert("Load Data...");
+    }
+</script>
