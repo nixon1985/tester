@@ -21,7 +21,7 @@ public class ProductInfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String productName;
-    private String productPrice;
+
 
     // @OneToMany(mappedBy = "productId",fetch = FetchType.LAZY)
     // List<ProductDetail> productDetail;
