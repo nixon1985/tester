@@ -6,6 +6,7 @@ import com.springtester.tester.model.ProductInfo;
 import com.springtester.tester.repository.ProductDetailRepository;
 import com.springtester.tester.repository.ProductRepository;
 import com.springtester.tester.service.ProductDetailService;
+import com.springtester.tester.service.ProductPriceInterface;
 import com.springtester.tester.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +27,7 @@ public class Dashboard {
 
     @Autowired
     private ProductService productService;
+    @Autowired
     private ProductDetailService productDetailService;
 
 
@@ -95,6 +97,20 @@ public class Dashboard {
     @GetMapping("/getAllByID/{id}")
     public List<ProductInfo> getAllByID(@PathVariable int id) {
         return productRepository.findAllById(id);
+    }
+
+
+
+    // Call Service
+    @GetMapping("/getAllProductPrice")
+    public List<ProductPriceInterface> getAllProductPrice(){
+        return productDetailService.getProductPrice();
+    }
+
+    //    Direct call Repository
+    @GetMapping("/getProductPrice")
+    public List<ProductPriceInterface> getAllProductPrice1(){
+        return productDetailRepository.getProductPrice();
     }
 
 /*

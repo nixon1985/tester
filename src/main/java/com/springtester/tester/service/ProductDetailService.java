@@ -10,6 +10,7 @@ import java.util.List;
 @Service
 public class ProductDetailService {
 
+
     @Autowired
     private ProductDetailRepository productDetailRepository;
 
@@ -23,6 +24,11 @@ public class ProductDetailService {
 
     public List<ProductDetail> getAllProductDetail(){
         return productDetailRepository.findAll();
+    }
+
+
+    public List<ProductPriceInterface> getProductPrice() {
+        return productDetailRepository.getProductPrice();
     }
 
 }

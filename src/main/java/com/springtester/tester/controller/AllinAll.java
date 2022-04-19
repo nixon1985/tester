@@ -16,10 +16,10 @@ public class AllinAll {
     @Autowired
     private ProductStockRepository productStockRepository;
 
-    @GetMapping("/getAllProduct")
-    public List<ProductInfo> getAllProduct(){
-        return productService.getAllProduct();
-    }
+//    @GetMapping("/getAllProduct")
+//    public List<ProductInfo> getAllProduct(){
+//        return productService.getAllProduct();
+//    }
 
     @GetMapping("/getAllProductStock")
     public List<ProductStock> getAllProductStock(){
